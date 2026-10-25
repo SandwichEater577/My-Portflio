@@ -1,4 +1,5 @@
 import { projects } from "./../Data/LayoutData.js";
+import "./BentoBox.css";
 
 export default function BentoBox() {
   return (
