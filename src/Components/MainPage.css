@@ -1,0 +1,14 @@
+#Page-Main-Container {
+  background: linear-gradient(
+    110deg,
+    rgb(193, 158, 109) 73%,
+    rgb(213, 175, 123) 76%,
+    rgb(193, 158, 109) 79%
+  );
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 50px;
+}
