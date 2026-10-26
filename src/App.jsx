@@ -1,11 +1,11 @@
-import Header from "./Components/Header";
-import BentoBox from "./Components/BentoBox";
+import MainPage from "./Components/MainPage.jsx";
+import Header from "./Components/Header.jsx";
 
 export default function App() {
   return (
-    <div>
+    <>
       <Header />
-      <BentoBox />
-    </div>
+      <MainPage />
+    </>
   );
 }
