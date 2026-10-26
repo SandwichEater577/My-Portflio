@@ -1,14 +1,11 @@
 #Page-Main-Container {
-  background: linear-gradient(
-    110deg,
-    rgb(193, 158, 109) 73%,
-    rgb(213, 175, 123) 76%,
-    rgb(193, 158, 109) 79%
-  );
-  flex-grow: 1;
+  background: linear-gradient(110deg, #a87c4f 0%, #d1bda9 50%, #a87c4f 100%);
 
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
 
   padding: 50px;
+
+  overflow-y: auto;
 }
