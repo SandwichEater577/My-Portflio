@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Outer Wooden Frame -->
+  <rect width="100" height="100" rx="16" fill="#2b1f18" />
+  
+  <!-- Big Featured Tile (Luma) -->
+  <rect x="8" y="8" width="52" height="52" rx="6" fill="#c19e6d" />
+  
+  <!-- Small Top Right Tile -->
+  <rect x="64" y="8" width="28" height="23" rx="4" fill="#fffcf5" />
+  
+  <!-- Small Middle Right Tile -->
+  <rect x="64" y="37" width="28" height="23" rx="4" fill="#fffcf5" />
+  
+  <!-- Wide Bottom Tile -->
+  <rect x="8" y="64" width="84" height="28" rx="6" fill="#fffcf5" />
+</svg>
