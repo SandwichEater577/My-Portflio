@@ -1,29 +1,34 @@
-// i asked co-pilot to generate some random projects so i can start playing with the .map function
+// Replaced generic AI projects with a mix of real and thematically fitting projects.
 
 export const projects = [
     {
         id: 1,
         title: "Luma",
-        description: "A minimalist productivity app for organizing daily tasks and routines."
+        description: "A custom programming language designed to build native Linux apps without needing to learn low-level languages. Built with Rust.",
+        featured: true // This is the flag that makes the box bigger!
     },
     {
         id: 2,
-        title: "Atlas",
-        description: "An interactive travel planner for discovering hidden destinations."
+        title: "Anime Bento Portfolio",
+        description: "This very website! A modern developer portfolio styled as a Bento Box with an anime-inspired metallic aesthetic.",
+        featured: false
     },
     {
         id: 3,
-        title: "Bloom",
-        description: "A plant care companion that helps users track watering and growth."
+        title: "Retro Arcade",
+        description: "A browser-based pixel art mini-game featuring local storage saving and custom canvas rendering.",
+        featured: false
     },
     {
         id: 4,
-        title: "Pulse",
-        description: "A real-time dashboard for visualizing personal fitness insights."
+        title: "Terminal Simulator",
+        description: "A joke web app that mimics a 90s movie hacker terminal. Type commands to trigger fake hacking sequences.",
+        featured: false
     },
     {
         id: 5,
-        title: "Canvas",
-        description: "A collaborative digital whiteboard for sharing ideas with remote teams."
+        title: "Pixl Dashboard",
+        description: "A community dashboard for Hack Club members to track coding hours, submit projects, and earn rewards.",
+        featured: false
     }
-];  
+];
