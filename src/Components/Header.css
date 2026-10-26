@@ -1,13 +1,45 @@
 header {
-  background-color: #0a0a0a;
-  color: #ffffff;
+  background-color: #fffcf5;
+  color: #5c4033;
 
-  padding: 15px 50px;
+  padding: 20px 50px;
 
   display: flex;
 
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: 4px solid #c19e6d;
+  border-bottom: 3px solid #d1bda9;
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+header button {
+  background-color: #fcf6eb;
+
+  color: #5c4033;
+
+  border: 2px solid #d1bda9;
+  border-radius: 20px;
+
+  padding: 8px 20px;
+  margin-left: 10px;
+
+  font-family: inherit;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.2s;
+}
+
+header button:hover {
+  background-color: #5c4033;
+  color: #fffcf5;
 }
