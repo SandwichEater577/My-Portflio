@@ -1,45 +1,60 @@
 header {
-  background-color: #fffcf5;
-  color: #5c4033;
-
-  padding: 20px 50px;
-
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 252, 245, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #e0d0bc;
+  padding: 20px 60px;
   display: flex;
-
   justify-content: space-between;
   align-items: center;
-
-  border-bottom: 3px solid #d1bda9;
-
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-header h1 {
-  font-size: 1.5rem;
+.logo-area h1 {
+  font-size: 1.8rem;
   font-weight: 800;
+  color: #2b1f18;
   letter-spacing: 1px;
+  margin: 0;
 }
 
-header button {
-  background-color: #fcf6eb;
+.logo-area h1 span {
+  color: #a87c4f;
+  font-weight: 400;
+}
 
-  color: #5c4033;
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
 
-  border: 2px solid #d1bda9;
-  border-radius: 20px;
-
-  padding: 8px 20px;
-  margin-left: 10px;
-
+.nav-links a {
   font-family: inherit;
-  font-weight: bold;
-
-  cursor: pointer;
-
-  transition: all 0.2s;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #5c4033;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-header button:hover {
-  background-color: #5c4033;
-  color: #fffcf5;
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: #a87c4f;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-links a:hover {
+  color: #a87c4f;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
