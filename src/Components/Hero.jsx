@@ -28,7 +28,24 @@ const iconMap = {
   Git: <FaGitAlt />,
 };
 
+const calculateAge = (birthDateString) => {
+  const today = new Date();
+  const birthDate = new Date(birthDateString);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDifference = today.getMonth() - birthDate.getMonth();
+
+  if (
+    monthDifference < 0 ||
+    (monthDifference === 0 && today.getDate() < birthDate.getDate())
+  ) {
+    age--;
+  }
+  return age;
+};
+
 export default function Hero() {
+  const age = calculateAge("2010-12-13");
+
   return (
     <section className="hero-section" id="hero">
       <div className="hero-card">
@@ -46,21 +63,29 @@ export default function Hero() {
 
         <div className="hero-bio">
           <p>
-            I'm a student at{" "}
+            I'm Michael, a {age}-year-old developer based in Warsaw, Poland.
+          </p>
+          <p>
+            I'm currently studying at{" "}
             <a
               href="https://technischools.com"
               target="_blank"
               rel="noreferrer"
               className="school-link"
             >
-              Technikum TechniSchools in Warsaw
+              TechniSchools
             </a>
-            . I specialize in building functional web applications and tinkering
-            with system-level code.
+            , where I learn best by just building stuff. Whether it's a simple
+            website, a weird interface, or a custom programming language, I love
+            making projects that teach me something new.
           </p>
           <p>
-            Currently exploring frontend architecture, custom compilers, and
-            modern web design.
+            I'm mostly into frontend development, but I also enjoy digging into
+            how things work under the hood, like compilers and low-level code. I
+            like experimenting with new tech and just bringing ideas to life.
+          </p>
+          <p id="hero-quote">
+            Always building, learning, and figuring out what's possible.
           </p>
         </div>
 
