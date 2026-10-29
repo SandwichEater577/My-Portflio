@@ -1,16 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- Outer Wooden Frame -->
-  <rect width="100" height="100" rx="16" fill="#2b1f18" />
-  
-  <!-- Big Featured Tile (Luma) -->
-  <rect x="8" y="8" width="52" height="52" rx="6" fill="#c19e6d" />
-  
-  <!-- Small Top Right Tile -->
-  <rect x="64" y="8" width="28" height="23" rx="4" fill="#fffcf5" />
-  
-  <!-- Small Middle Right Tile -->
-  <rect x="64" y="37" width="28" height="23" rx="4" fill="#fffcf5" />
-  
-  <!-- Wide Bottom Tile -->
-  <rect x="8" y="64" width="84" height="28" rx="6" fill="#fffcf5" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Nestea</title>
+  <rect width="64" height="64" rx="14" fill="#09090b"/>
+  <path d="M15 18h9L13 46H4z" fill="#777780"/>
+  <path d="M25 46V18h7l14 17V18h8v28h-7L33 29v17z" fill="#f4f4f5"/>
+  <circle cx="54" cy="51" r="4" fill="#10b981"/>
 </svg>
