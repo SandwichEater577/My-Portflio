@@ -1,7 +1,9 @@
+import Nestea from "./NesTea.webp";
+
 export const profile = {
     name: "Nestea",
     handle: "nestea.dev",
-    avatar: "https://avatars.githubusercontent.com/u/236650016?v=4&size=64",
+    avatar: Nestea,
 };
 
 export const navLinks = ["Projects", "About me", "Contact"];
