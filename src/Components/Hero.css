@@ -149,3 +149,9 @@
 .skill-tag:hover .skill-icon {
   color: #ffffff;
 }
+
+#hero-quote {
+  color: #ffffff;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
