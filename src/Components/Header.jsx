@@ -1,3 +1,4 @@
+import { navLinks } from "../Data/data.js";
 import "./Header.css";
 
 export default function Header() {
@@ -10,18 +11,15 @@ export default function Header() {
       </div>
 
       <nav className="header-navigation" id="main-navigation">
-        <button id="navigation-projects" className="navigation-button active">
-          Projects
-        </button>
-        <button id="navigation-about" className="navigation-button">
-          About me
-        </button>
-        <button
-          id="navigation-contact"
-          className="navigation-button primary-button"
-        >
-          Contact
-        </button>
+        {navLinks.map((link) => (
+          <a
+            key={link}
+            href={`#${link.toLowerCase().replace(" ", "-")}`}
+            className="navigation-button"
+          >
+            {link}
+          </a>
+        ))}
       </nav>
     </header>
   );
