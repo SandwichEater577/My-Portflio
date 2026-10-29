@@ -6,7 +6,11 @@ export const profile = {
     avatar: Nestea,
 };
 
-export const navLinks = ["Projects", "About me", "Contact"];
+export const navLinks = [
+    { label: "Projects", href: "#projects" },
+    { label: "About me", href: "#about-me" },
+    { label: "Contact", href: "#contact" }
+];
 
 export const socials = [
     { name: "GitHub", url: "https://github.com/SandwichEater577" },

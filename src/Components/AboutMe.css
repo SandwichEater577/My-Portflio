@@ -1,11 +1,12 @@
-.hero-section {
+.about-me-section {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 4rem 2rem;
+  scroll-margin-top: 15vh;
 }
 
-.hero-card {
+.about-me-card {
   background: #121214;
   border: 1px solid #27272a;
   border-radius: 16px;
@@ -15,16 +16,15 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-
   box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.7);
   transition: box-shadow 0.3s ease;
 }
 
-.hero-card:hover {
+.about-me-card:hover {
   box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.9);
 }
 
-.hero-header {
+.about-me-header {
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -32,12 +32,12 @@
   padding-bottom: 2rem;
 }
 
-.avatar-wrapper {
+.about-me-avatar-wrapper {
   position: relative;
   display: inline-block;
 }
 
-.hero-avatar {
+.about-me-avatar {
   width: 96px;
   height: 96px;
   border: 2px solid #3f3f46;
@@ -46,7 +46,7 @@
   display: block;
 }
 
-.status-dot {
+.about-me-status-dot {
   position: absolute;
   bottom: 6px;
   right: 6px;
@@ -58,7 +58,7 @@
   box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
 }
 
-.hero-name {
+.about-me-name {
   font-family: var(--font-display);
   font-size: 2.8rem;
   color: #ffffff;
@@ -67,13 +67,13 @@
   margin-bottom: 0.25rem;
 }
 
-.hero-handle {
+.about-me-handle {
   color: #71717a;
   font-size: 1rem;
   font-family: var(--font-sans);
 }
 
-.hero-bio {
+.about-me-bio {
   color: #a1a1aa;
   font-size: 1rem;
   line-height: 1.7;
@@ -109,14 +109,14 @@
   background-color: #ffffff;
 }
 
-.hero-skills {
+.about-me-skills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
   margin-top: 0.5rem;
 }
 
-.skill-tag {
+.about-me-skill-tag {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -132,13 +132,13 @@
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.skill-tag:hover {
+.about-me-skill-tag:hover {
   background: #27272a;
   border-color: #52525b;
   color: #ffffff;
 }
 
-.skill-icon {
+.about-me-skill-icon {
   display: flex;
   align-items: center;
   font-size: 1.1rem;
@@ -146,11 +146,11 @@
   transition: color 0.2s ease;
 }
 
-.skill-tag:hover .skill-icon {
+.about-me-skill-tag:hover .about-me-skill-icon {
   color: #ffffff;
 }
 
-#hero-quote {
+#about-me-quote {
   color: #ffffff;
   font-weight: 500;
   margin-top: 0.5rem;

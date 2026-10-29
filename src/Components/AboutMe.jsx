@@ -1,5 +1,5 @@
 import { profile, skills } from "../Data/data.js";
-import "./Hero.css";
+import "./AboutMe.css";
 import {
   FaPython,
   FaJsSquare,
@@ -43,25 +43,29 @@ const calculateAge = (birthDateString) => {
   return age;
 };
 
-export default function Hero() {
+export default function AboutMe() {
   const age = calculateAge("2010-12-13");
 
   return (
-    <section className="hero-section" id="hero">
-      <div className="hero-card">
-        <div className="hero-header">
-          <div className="avatar-wrapper">
-            <img src={profile.avatar} alt="Avatar" className="hero-avatar" />
-            <span className="status-dot"></span>
+    <section className="about-me-section" id="about-me">
+      <div className="about-me-card">
+        <div className="about-me-header">
+          <div className="about-me-avatar-wrapper">
+            <img
+              src={profile.avatar}
+              alt="Avatar"
+              className="about-me-avatar"
+            />
+            <span className="about-me-status-dot"></span>
           </div>
 
-          <div className="hero-titles">
-            <h1 className="hero-name">{profile.name}</h1>
-            <p className="hero-handle">@{profile.handle}</p>
+          <div className="about-me-titles">
+            <h1 className="about-me-name">{profile.name}</h1>
+            <p className="about-me-handle">@{profile.handle}</p>
           </div>
         </div>
 
-        <div className="hero-bio">
+        <div className="about-me-bio">
           <p>
             I'm Michael, a {age}-year-old developer based in Warsaw, Poland.
           </p>
@@ -84,15 +88,15 @@ export default function Hero() {
             how things work under the hood, like compilers and low-level code. I
             like experimenting with new tech and just bringing ideas to life.
           </p>
-          <p id="hero-quote">
+          <p id="about-me-quote">
             Always building, learning, and figuring out what's possible.
           </p>
         </div>
 
-        <div className="hero-skills">
+        <div className="about-me-skills">
           {skills.map((skill) => (
-            <div key={skill} className="skill-tag" title={skill}>
-              <span className="skill-icon">{iconMap[skill]}</span>
+            <div key={skill} className="about-me-skill-tag" title={skill}>
+              <span className="about-me-skill-icon">{iconMap[skill]}</span>
               {skill}
             </div>
           ))}

@@ -12,12 +12,8 @@ export default function Header() {
 
       <nav className="header-navigation" id="main-navigation">
         {navLinks.map((link) => (
-          <a
-            key={link}
-            href={`#${link.toLowerCase().replace(" ", "-")}`}
-            className="navigation-button"
-          >
-            {link}
+          <a key={link.label} href={link.href} className="navigation-button">
+            {link.label}
           </a>
         ))}
       </nav>

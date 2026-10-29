@@ -1,9 +1,9 @@
-import Hero from "./Hero.jsx";
+import AboutMe from "./AboutMe.jsx";
 
 export default function Main() {
   return (
     <main>
-      <Hero />
+      <AboutMe />
     </main>
   );
 }
