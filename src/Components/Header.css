@@ -44,7 +44,6 @@ header {
   color: #ffffff;
 }
 
-/* Kreska pod linkiem */
 .navigation-button::after {
   content: "";
   position: absolute;
@@ -52,7 +51,7 @@ header {
   left: 0;
   width: 0;
   height: 2px;
-  border-radius: 2px; /* Zaokrąglona kreska */
+  border-radius: 2px;
   background: #ffffff;
   transition: width 0.2s ease;
 }
