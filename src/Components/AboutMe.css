@@ -2,11 +2,13 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 2rem;
   scroll-margin-top: 15vh;
 }
 
 .about-me-card {
+  position: relative;
+  overflow: hidden;
   background: #121214;
   border: 1px solid #27272a;
   border-radius: 16px;
@@ -23,6 +25,72 @@
 .about-me-card:hover {
   box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.9);
 }
+
+/* --- JEDEN BURGUNDOWY BŁYSK --- */
+.about-me-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(92, 26, 27, 0) 240deg,
+    rgba(128, 0, 32, 0.8) 320deg,
+    rgba(165, 42, 42, 1) 345deg,
+    rgba(128, 0, 32, 0.8) 355deg,
+    transparent 360deg
+  );
+  opacity: 0;
+  z-index: 0;
+}
+
+.about-me-card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #121214;
+  border-radius: 14px;
+  z-index: 1;
+}
+
+.about-me-section:target .about-me-card::before {
+  animation:
+    spin-shine 3s linear infinite,
+    fade-shine-sequence 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.about-me-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes spin-shine {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-shine-sequence {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* --------------------------- */
 
 .about-me-header {
   display: flex;
@@ -102,11 +170,11 @@
 }
 
 .school-link:hover {
-  color: #ffffff;
+  color: #a78bfa;
 }
 
 .school-link:hover::after {
-  background-color: #ffffff;
+  background-color: #a78bfa;
 }
 
 .about-me-skills {
@@ -117,6 +185,51 @@
 }
 
 .about-me-skill-tag {
+  position: relative;
+  border-radius: 8px;
+  padding: 1px;
+  overflow: hidden;
+  background: #27272a;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.about-me-skill-tag:hover {
+  background: var(--skill-color);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--skill-color) 25%, transparent);
+}
+
+.about-me-skill-tag::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 250deg,
+    rgba(255, 255, 255, 0.05) 300deg,
+    rgba(255, 255, 255, 0.3) 340deg,
+    rgba(255, 255, 255, 0.05) 355deg,
+    transparent 360deg
+  );
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+  animation: spin-shine 6s linear infinite;
+}
+
+.about-me-skill-tag:hover::before {
+  opacity: 0.7;
+}
+
+.about-me-skill-content {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -125,17 +238,14 @@
   font-weight: 500;
   color: #d4d4d8;
   background: #18181b;
-  border: 1px solid #27272a;
   padding: 0.5rem 0.8rem;
-  border-radius: 8px;
-  cursor: default;
+  border-radius: 7px;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.about-me-skill-tag:hover {
-  background: #27272a;
-  border-color: #52525b;
-  color: #ffffff;
+.about-me-skill-tag:hover .about-me-skill-content {
+  color: var(--skill-color);
+  background: color-mix(in srgb, var(--skill-color) 10%, #18181b);
 }
 
 .about-me-skill-icon {
@@ -147,7 +257,7 @@
 }
 
 .about-me-skill-tag:hover .about-me-skill-icon {
-  color: #ffffff;
+  color: var(--skill-color);
 }
 
 #about-me-quote {

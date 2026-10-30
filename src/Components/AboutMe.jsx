@@ -8,11 +8,11 @@ import {
   FaPhp,
   FaDatabase,
   FaTerminal,
-  FaCode,
   FaReact,
   FaLinux,
   FaGitAlt,
 } from "react-icons/fa";
+import { SiCplusplus, SiC, SiNodedotjs } from "react-icons/si";
 
 const iconMap = {
   Python: <FaPython />,
@@ -22,10 +22,12 @@ const iconMap = {
   PHP: <FaPhp />,
   SQL: <FaDatabase />,
   Bash: <FaTerminal />,
-  C: <FaCode />,
+  C: <SiC />,
+  "C++": <SiCplusplus />,
   React: <FaReact />,
   Linux: <FaLinux />,
   Git: <FaGitAlt />,
+  "Node.js": <SiNodedotjs />,
 };
 
 const calculateAge = (birthDateString) => {
@@ -79,9 +81,9 @@ export default function AboutMe() {
             >
               TechniSchools
             </a>
-            , where I learn best by just building stuff. Whether it's a simple
-            website, a weird interface, or a custom programming language, I love
-            making projects that teach me something new.
+            , where I learn from the best. Whether it's a simple web app, SQL
+            database, or an algorithmics test, I enjoy making projects that
+            teach me something new.
           </p>
           <p>
             I'm mostly into frontend development, but I also enjoy digging into
@@ -95,9 +97,18 @@ export default function AboutMe() {
 
         <div className="about-me-skills">
           {skills.map((skill) => (
-            <div key={skill} className="about-me-skill-tag" title={skill}>
-              <span className="about-me-skill-icon">{iconMap[skill]}</span>
-              {skill}
+            <div
+              key={skill.name}
+              className="about-me-skill-tag"
+              title={skill.name}
+              style={{ "--skill-color": skill.color }}
+            >
+              <div className="about-me-skill-content">
+                <span className="about-me-skill-icon">
+                  {iconMap[skill.name]}
+                </span>
+                {skill.name}
+              </div>
             </div>
           ))}
         </div>

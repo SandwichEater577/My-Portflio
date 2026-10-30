@@ -1,0 +1,28 @@
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-top-row {
+  display: grid;
+  /* Dwie równe kolumny */
+  grid-template-columns: 1fr 1fr;
+  /* Odstęp między kartami (dzięki temu się nie dotykają) */
+  gap: 2rem;
+
+  width: 100%;
+  /* Zwiększony max-width, żeby dwie karty po 700px zmieściły się obok siebie + gap */
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Na mniejszych ekranach (poniżej 1200px) karty ustawią się jedna pod drugą */
+@media (max-width: 1200px) {
+  .main-top-row {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
