@@ -1,9 +1,9 @@
-import Nestea from "./NesTea.webp";
+import Ouro from "./Ouro.png";
 
 export const profile = {
-    name: "Nestea",
-    handle: "nestea.dev",
-    avatar: Nestea,
+    name: "Ouro",
+    handle: "ouro.dev",
+    avatar: Ouro,
 };
 
 export const navLinks = [
