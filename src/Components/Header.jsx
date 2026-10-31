@@ -6,7 +6,7 @@ export default function Header() {
     <header id="main-header">
       <div className="header-logo-container">
         <h1 className="header-title">
-          <span className="header-title-symbol">~/</span>Nestea
+          <span className="header-title-symbol">~/</span>Ouro
         </h1>
       </div>
 
