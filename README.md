@@ -1,6 +1,6 @@
 <div align="center">
 
-# NesTea | Dev
+# Ouro | Dev
 
 **My personal portfolio website.**
 
@@ -85,6 +85,6 @@ Hosted on [Vercel](https://vercel.com/). Every push to `main` redeploys automati
 
 <div align="center">
 
-Made by [NesTea](https://github.com/SandwichEater577)
+Made by [Ouro](https://github.com/SandwichEater577)
 
 </div>
