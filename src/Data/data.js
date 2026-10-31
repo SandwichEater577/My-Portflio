@@ -15,6 +15,7 @@ export const navLinks = [
 export const socials = [
     { name: "GitHub", url: "https://github.com/SandwichEater577", color: "#ffffff" },
     { name: "Discord", url: "https://discord.com/users/1328862858582425673", color: "#5865F2" },
+    { name: "Slack", url: "https://hackclub.slack.com/team/U0CBTU8KKPF", color: "#4A154B" },
     { name: "School Email", url: "mailto:u178_kosmic_waw@technischools.com", color: "#EA4335" }
 ];
 
