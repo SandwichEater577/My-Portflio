@@ -58,7 +58,6 @@ export default function AboutMe() {
               alt="Avatar"
               className="about-me-avatar"
             />
-            <span className="about-me-status-dot"></span>
           </div>
 
           <div className="about-me-titles">
