@@ -1,11 +1,12 @@
 import { socials } from "../Data/data.js";
 import "./Contact.css";
-import { FaGithub, FaDiscord, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaDiscord, FaEnvelope, FaSlack } from "react-icons/fa";
 
 const iconMap = {
   GitHub: <FaGithub />,
   Discord: <FaDiscord />,
   "School Email": <FaEnvelope />,
+  Slack: <FaSlack />,
 };
 
 export default function Contact() {
