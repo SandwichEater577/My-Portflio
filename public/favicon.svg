@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <title>Nestea</title>
+  <title>Oryx</title>
   <rect width="64" height="64" rx="14" fill="#09090b"/>
   <path d="M15 18h9L13 46H4z" fill="#777780"/>
-  <path d="M25 46V18h7l14 17V18h8v28h-7L33 29v17z" fill="#f4f4f5"/>
-  <circle cx="54" cy="51" r="4" fill="#10b981"/>
+  <path fill="#f4f4f5" fill-rule="evenodd" d="M39.5 18C48.1 18 54 23.7 54 32s-5.9 14-14.5 14S25 40.3 25 32s5.9-14 14.5-14Zm0 7C35 25 33 27.8 33 32s2 7 6.5 7 6.5-2.8 6.5-7-2-7-6.5-7Z"/>
 </svg>
