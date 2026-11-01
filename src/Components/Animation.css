@@ -1,0 +1,87 @@
+.animation-wrapper {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  transition: border-color 0.3s ease;
+}
+
+.animation-wrapper.active {
+  border-color: transparent;
+}
+
+.animation-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 60deg,
+    var(--ray-color) 120deg,
+    transparent 180deg,
+    transparent 240deg,
+    var(--ray-color) 300deg,
+    transparent 360deg
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: spin-glow 4s linear infinite;
+  z-index: 0;
+}
+
+.animation-wrapper.active > .animation-glow {
+  opacity: 1;
+}
+
+.animation-content {
+  position: relative;
+  z-index: 1;
+  background: #121214;
+  border-radius: 3px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  margin: 1px;
+  transition: background 0.3s ease;
+  display: flex;
+}
+
+.animation-wrapper.active > .animation-content {
+  background: color-mix(in srgb, var(--ray-color) 5%, #121214);
+}
+
+.about-me-card .animation-content,
+.contact-card .animation-content {
+  flex-direction: column;
+  padding: 3rem;
+  gap: 2.5rem;
+}
+
+.contact-link .animation-content {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.about-me-skill-tag .animation-content {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 0.8rem;
+  width: auto;
+}
+
+@keyframes spin-glow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

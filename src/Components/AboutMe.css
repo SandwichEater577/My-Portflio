@@ -7,101 +7,9 @@
 }
 
 .about-me-card {
-  position: relative;
-  overflow: hidden;
-  background: #121214;
-  /* Ostre krawędzie */
-  border-radius: 4px;
-
-  /* Techniczna ramka: ciemna zewnętrzna, delikatna wewnętrzna */
-  border: 1px solid #27272a;
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.03),
-    8px 8px 0px rgba(0, 0, 0, 0.6); /* TWARDY CIEŃ */
-
   max-width: 700px;
   width: 100%;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
 }
-
-.about-me-card:hover {
-  border-color: #52525b;
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
-    10px 10px 0px rgba(0, 0, 0, 0.8);
-}
-
-/* --- JEDEN BURGUNDOWY BŁYSK --- */
-.about-me-card::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    rgba(92, 26, 27, 0) 240deg,
-    rgba(128, 0, 32, 0.8) 320deg,
-    rgba(165, 42, 42, 1) 345deg,
-    rgba(128, 0, 32, 0.8) 355deg,
-    transparent 360deg
-  );
-  opacity: 0;
-  z-index: 0;
-}
-
-.about-me-card::after {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  background: #121214;
-  border-radius: 3px;
-  z-index: 1;
-}
-
-.about-me-section:target .about-me-card::before {
-  animation:
-    spin-shine 3s linear infinite,
-    fade-shine-sequence 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.about-me-card > * {
-  position: relative;
-  z-index: 2;
-}
-
-@keyframes spin-shine {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes fade-shine-sequence {
-  0% {
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-/* --------------------------- */
 
 .about-me-header {
   display: flex;
@@ -119,10 +27,11 @@
 .about-me-avatar {
   width: 96px;
   height: 96px;
-  border-radius: 4px; /* Ostre zdjęcie profilowe */
+  border-radius: 4px;
   object-fit: cover;
   display: block;
-  border: 1px solid #27272a;
+  cursor: pointer;
+  user-select: none;
 }
 
 .about-me-name {
@@ -184,67 +93,7 @@
 }
 
 .about-me-skill-tag {
-  position: relative;
-  border-radius: 2px; /* Bardzo ostre tagi */
-  padding: 1px;
-  overflow: hidden;
-  background: #27272a;
-  transition:
-    background 0.3s ease,
-    box-shadow 0.3s ease;
   cursor: default;
-}
-
-.about-me-skill-tag:hover {
-  background: var(--skill-color);
-  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
-}
-
-.about-me-skill-tag::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    transparent 250deg,
-    rgba(255, 255, 255, 0.05) 300deg,
-    rgba(255, 255, 255, 0.3) 340deg,
-    rgba(255, 255, 255, 0.05) 355deg,
-    transparent 360deg
-  );
-  opacity: 0;
-  z-index: 1;
-  transition: opacity 0.3s ease;
-  animation: spin-shine 6s linear infinite;
-}
-
-.about-me-skill-tag:hover::before {
-  opacity: 0.7;
-}
-
-.about-me-skill-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #d4d4d8;
-  background: #18181b;
-  padding: 0.5rem 0.8rem;
-  border-radius: 1px;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.about-me-skill-tag:hover .about-me-skill-content {
-  color: var(--skill-color);
-  background: color-mix(in srgb, var(--skill-color) 10%, #18181b);
 }
 
 .about-me-skill-icon {
@@ -256,7 +105,7 @@
 }
 
 .about-me-skill-tag:hover .about-me-skill-icon {
-  color: var(--skill-color);
+  color: var(--ray-color);
 }
 
 #about-me-quote {

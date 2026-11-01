@@ -25,6 +25,12 @@ header {
   font-weight: 400;
 }
 
+.header-right-side {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
 .header-navigation {
   display: flex;
   gap: 1.5rem;
@@ -58,4 +64,42 @@ header {
 
 .navigation-button:hover::after {
   width: 100%;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-left: 1px solid #27272a;
+  padding-left: 1.5rem;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: #52525b;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.lang-btn:hover {
+  color: #a1a1aa;
+}
+
+.lang-btn.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.lang-divider {
+  color: #27272a;
+  font-weight: 300;
+  user-select: none;
 }
