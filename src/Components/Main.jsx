@@ -4,7 +4,7 @@ import Projects from "./Projects.jsx";
 import { profile } from "../Data/data.js";
 import "./Main.css";
 
-export default function Main() {
+export default function Main({ lang, shineTrigger }) {
   return (
     <>
       <div id="background-container">
@@ -12,10 +12,10 @@ export default function Main() {
       </div>
       <main className="main-container">
         <div className="main-top-row">
-          <AboutMe />
-          <Contact />
+          <AboutMe lang={lang} shineTrigger={shineTrigger} />
+          <Contact lang={lang} shineTrigger={shineTrigger} />
         </div>
-        <Projects />
+        <Projects lang={lang} />
       </main>
     </>
   );

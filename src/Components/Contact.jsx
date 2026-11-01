@@ -1,24 +1,48 @@
-import { socials } from "../Data/data.js";
+import { useState, useEffect } from "react";
+import { socials, translations } from "../Data/data.js";
+import Animation from "./Animation.jsx";
 import "./Contact.css";
-import { FaGithub, FaDiscord, FaEnvelope, FaSlack } from "react-icons/fa";
+import {
+  FaGithub,
+  FaDiscord,
+  FaEnvelope,
+  FaSlack,
+  FaInstagram,
+} from "react-icons/fa";
 
 const iconMap = {
   GitHub: <FaGithub />,
   Discord: <FaDiscord />,
   "School Email": <FaEnvelope />,
   Slack: <FaSlack />,
+  Instagram: <FaInstagram />,
 };
 
-export default function Contact() {
+export default function Contact({ lang, shineTrigger }) {
+  const t = translations[lang].contact;
+  const [isShining, setIsShining] = useState(false);
+
+  useEffect(() => {
+    if (shineTrigger.id === "contact") {
+      setIsShining(true);
+      const timer = setTimeout(() => setIsShining(false), 2000);
+      return () => clearTimeout(timer);
+    } else {
+      setIsShining(false); // Reset, jeśli kliknięto inny przycisk
+    }
+  }, [shineTrigger.id, shineTrigger.key]);
+
   return (
     <section className="contact-section" id="contact">
-      <div className="contact-card">
+      <Animation
+        color="#a52a2a"
+        className="contact-card"
+        forceActive={isShining}
+        hoverable={false}
+      >
         <div className="contact-header">
-          <h2 className="contact-title">Let's connect.</h2>
-          <p className="contact-subtitle">
-            Want to collaborate on a project, ask a question, or just say hi?
-            Feel free to reach out through any of these platforms.
-          </p>
+          <h2 className="contact-title">{t.title}</h2>
+          <p className="contact-subtitle">{t.subtitle}</p>
         </div>
 
         <div className="contact-links">
@@ -28,10 +52,9 @@ export default function Contact() {
               href={social.url}
               target="_blank"
               rel="noreferrer"
-              className="contact-link"
-              style={{ "--social-color": social.color }}
+              style={{ textDecoration: "none" }}
             >
-              <div className="contact-link-content">
+              <Animation color={social.color} className="contact-link">
                 <span className="contact-icon">{iconMap[social.name]}</span>
                 <div className="contact-link-info">
                   <span className="contact-link-name">{social.name}</span>
@@ -39,11 +62,11 @@ export default function Contact() {
                     {social.display ?? social.url.replace("mailto:", "")}
                   </span>
                 </div>
-              </div>
+              </Animation>
             </a>
           ))}
         </div>
-      </div>
+      </Animation>
     </section>
   );
 }
