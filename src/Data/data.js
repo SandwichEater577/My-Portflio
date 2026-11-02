@@ -68,7 +68,7 @@ export const translations = {
         },
         projects: {
             title: "Selected Projects",
-            subtitle: "Things I've built and sent."
+            subtitle: "Things I've built and deployed."
         }
     },
     pl: {
@@ -86,7 +86,7 @@ export const translations = {
         },
         projects: {
             title: "Wybrane Projekty",
-            subtitle: "Rzeczy, które zbudowałem i wysłałem."
+            subtitle: "Rzeczy, które zbudowałem i wdrożyłem."
         }
     }
 };
