@@ -42,7 +42,7 @@ export const skills = [
 export const projects = [
     {
         id: 1,
-        title: { en: "Game of Life", pl: "Gra w Życie" },
+        title: { en: "Game of Life", pl: "Gra Życia" },
         description: {
             en: "A Python implementation of Conway's Game of Life with a terminal interface. Features custom rendering and simulation logic.",
             pl: "Implementacja Gry w Życie Conwaya w Pythonie z interfejsem terminalowym. Zawiera niestandardowe renderowanie i logikę symulacji."
