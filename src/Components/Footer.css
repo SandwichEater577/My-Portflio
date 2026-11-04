@@ -1,6 +1,5 @@
 .site-footer {
   width: 100%;
-  /* Wypycha stopkę na sam dół, jeśli strona jest krótka */
   margin-top: auto;
   border-top: 1px solid #27272a;
   background: #09090b;
@@ -8,7 +7,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 10; /* Żeby było nad tłem Ouroborosa */
+  z-index: 10;
 }
 
 .footer-content {
@@ -22,17 +21,12 @@
   font-size: 0.85rem;
 }
 
-.footer-left p {
-  margin: 0;
-}
-
 .footer-right {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-/* Przycisk powrotu na górę */
 .back-to-top {
   background: transparent;
   border: none;
@@ -48,14 +42,12 @@
   color: #ffffff;
 }
 
-/* Responsywność - na telefonach układamy w pionie */
 @media (max-width: 600px) {
   .footer-content {
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
   }
-
   .footer-right {
     flex-direction: column;
     gap: 1rem;
