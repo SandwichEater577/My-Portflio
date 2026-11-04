@@ -38,7 +38,7 @@ export const skills = [
 ];
 
 export const setup = [
-    { name: { en: "Operating System", pl: "System" }, value: "EndeavourOS (Arch)", icon: EOS },
+    { name: { en: "Operating System", pl: "System" }, value: "EndeavourOS ", icon: EOS },
     { name: { en: "Primary Editor", pl: "Główny Edytor" }, value: "VS Code", icon: "vscode" },
     { name: { en: "Terminal Editor", pl: "Edytor Terminalowy" }, value: "Helix", icon: "helix" },
     { name: { en: "Daily Driver", pl: "Główny System" }, value: "Linux Main", icon: "linux" },
