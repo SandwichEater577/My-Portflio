@@ -9,8 +9,6 @@ export default function Animation({
   hoverable = true,
 }) {
   const [isHovered, setIsHovered] = useState(false);
-
-  // Aktywne, jeśli jest hover (i hover jest dozwolony) LUB wymuszone przez rodzica
   const active = forceActive || (hoverable && isHovered);
 
   return (
