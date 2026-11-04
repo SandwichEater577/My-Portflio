@@ -1,4 +1,4 @@
-import Ouro from "./Ouro.png";
+import Ouro from "./../..public/Ouro.png";
 
 export const profile = {
     name: "Ouro",
@@ -55,7 +55,7 @@ export const projects = [
 export const translations = {
     en: {
         aboutMe: {
-            bio1: "I'm Michael and I'm a {age}-year-old programmer.",
+            bio1: "I'm Michael and I'm a {age}-year-old developer.",
             bio2_part1: "I attend ",
             bio2_link: "TechniSchools",
             bio2_part2: " as a student, where I learn from the best. Whether it's a simple web app, an SQL database, or an algorithmics test, I enjoy creating projects that teach me something new.",
@@ -73,7 +73,7 @@ export const translations = {
     },
     pl: {
         aboutMe: {
-            bio1: "Jestem Michał, {age}-letnim programistą.",
+            bio1: "Jestem Michał, {age}-letnim deweloperem.",
             bio2_part1: "Uczęszczam do ",
             bio2_link: "TechniSchools",
             bio2_part2: " jako uczeń, gdzie uczę się od najlepszych. Niezależnie od tego, czy jest to prosta aplikacja webowa, baza SQL, czy test z algorytmiki, lubię tworzyć projekty, które uczą mnie czegoś nowego.",
