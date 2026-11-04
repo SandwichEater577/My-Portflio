@@ -74,11 +74,9 @@ export default function AboutMe({ lang, shineTrigger }) {
 
   const handleAvatarClick = () => {
     if (!isSpinning) {
-      // Start: 5 pełnych obrotów w 120 sekund (bardzo wolno)
       setIsSpinning(true);
       setRotation((prev) => prev + 1800);
     } else {
-      // Stop: wyliczamy następną wielokrotność 360, żeby zawsze kręcił się do przodu
       setIsSpinning(false);
       setRotation((prev) => Math.ceil((prev + 1) / 360) * 360);
     }
@@ -92,7 +90,7 @@ export default function AboutMe({ lang, shineTrigger }) {
         forceActive={isShining}
         hoverable={false}
       >
-        <div className="about-me-header">
+        <div style={{ userSelect: "text" }} className="about-me-header">
           <div className="about-me-avatar-wrapper">
             <img
               src={profile.avatar}
@@ -103,18 +101,17 @@ export default function AboutMe({ lang, shineTrigger }) {
                 transform: `rotate(${rotation}deg)`,
                 transition: isSpinning
                   ? "transform 120s linear"
-                  : // Nowa krzywa hamowania: zachowuje pęd i bardzo spokojnie zwalnia przez 4s
-                    "transform 4s cubic-bezier(0.1, 0.8, 0.2, 1)",
+                  : "transform 4s cubic-bezier(0.1, 0.8, 0.2, 1)",
               }}
             />
           </div>
-          <div className="about-me-titles">
+          <div>
             <h1 className="about-me-name">{profile.name}</h1>
             <p className="about-me-handle">@{profile.handle}</p>
           </div>
         </div>
 
-        <div className="about-me-bio">
+        <div style={{ userSelect: "text" }} className="about-me-bio">
           <p>{t.bio1.replace("{age}", age)}</p>
           <p>
             {t.bio2_part1}
@@ -129,6 +126,7 @@ export default function AboutMe({ lang, shineTrigger }) {
             {t.bio2_part2}
           </p>
           <p>{t.bio3}</p>
+          <p>{t.bio4}</p>
           <p id="about-me-quote">{t.quote}</p>
         </div>
 
@@ -139,8 +137,18 @@ export default function AboutMe({ lang, shineTrigger }) {
               color={skill.color}
               className="about-me-skill-tag"
             >
-              <span className="about-me-skill-icon">{iconMap[skill.name]}</span>
-              {skill.name}
+              <a
+                href={skill.link}
+                target="_blank"
+                rel="noreferrer"
+                className="about-me-skill-link"
+                aria-label={`${skill.name} on GitHub`}
+              >
+                <span className="about-me-skill-icon">
+                  {iconMap[skill.name]}
+                </span>
+                <span>{skill.name}</span>
+              </a>
             </Animation>
           ))}
         </div>
