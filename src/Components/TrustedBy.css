@@ -1,0 +1,120 @@
+.trusted-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.trusted-text {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: #71717a;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+
+.trusted-marquee-container {
+  width: 100%;
+  background: linear-gradient(180deg, #121214 0%, #09090b 100%);
+  border: 1px solid #27272a;
+  border-radius: 24px;
+  padding: 2rem 0;
+  overflow: hidden;
+  position: relative;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+
+.trusted-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-marquee 30s linear infinite;
+
+  /* GPU acceleration – kluczowe dla płynności marquee */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.trusted-marquee-container:hover .trusted-marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding-right: 5rem;
+}
+
+.trusted-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.trusted-logo-wrapper:hover {
+  opacity: 1;
+}
+
+.trusted-logo-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(200%);
+  transition: filter 0.3s ease;
+}
+
+.trusted-logo-wrapper:hover .trusted-logo-img {
+  filter: grayscale(0%) brightness(100%);
+}
+
+.trusted-logo-svg {
+  height: 100%;
+  width: auto;
+  fill: #a1a1aa;
+  transition: fill 0.3s ease;
+}
+
+.ts-maze,
+.ts-text {
+  fill: inherit;
+}
+
+.trusted-logo-wrapper:hover .trusted-logo-svg {
+  fill: #ffffff;
+}
+
+.trusted-logo-wrapper:hover .ts-maze {
+  fill: #3813c2;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
