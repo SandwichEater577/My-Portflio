@@ -96,10 +96,27 @@
   cursor: default;
 }
 
-.about-me-skill-icon {
+.about-me-skill-link {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  font-size: 1.1rem;
+  gap: 0.5rem;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #d4d4d8;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.about-me-skill-link:hover {
+  color: #ffffff;
+}
+
+.about-me-skill-icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.35rem;
   color: #a1a1aa;
   transition: color 0.2s ease;
 }
