@@ -41,6 +41,9 @@
 
 .contact-link {
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .contact-icon {
@@ -71,4 +74,25 @@
   font-family: var(--font-sans);
   font-size: 0.85rem;
   color: #71717a;
+}
+
+.copy-button {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #71717a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #3f3f46;
 }
