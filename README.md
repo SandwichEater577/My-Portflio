@@ -12,6 +12,18 @@ My personal portfolio. Built with React + Vite, just so I have one place for my 
 
 ---
 
+## About the project
+
+This is my personal portfolio. I built it from scratch using React and Vite to have a central place for my projects and social links. I didn't want to use a pre-made template, mostly because I wanted to practice building a UI from scratch and having full control over the codebase.
+
+The site is a single-page application with a dark theme. It includes a custom glow animation that follows your mouse, a spinning avatar, and a scrolling marquee for the "Trusted by" section. I also added a System Specs section so people can see what tools and OS I use daily.
+
+For styling, I used pure CSS to practice layout and animations without relying on frameworks like Tailwind. There's a custom animation component that handles the glowing effects and hover states across different sections. The whole site is fully responsive and works on mobile devices.
+
+I built a simple language toggle for English and Polish. Instead of hardcoding text inside the components, everything (translations, projects, setup specs, skills) is stored in a single `data.js` file. This makes it really easy to update content or add new projects without digging through the JSX. The project is hosted on Vercel, and every push to the main branch triggers an automatic deployment.
+
+---
+
 ## Showcase
 
 ### About Me
