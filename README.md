@@ -100,3 +100,9 @@ MIT. See the LICENSE file for details.
 Made by Ouro
 
 </div>
+
+# AI
+
+i used AI for learning whats robots.txt, and sitemap.xml, after descovering .xml, i asked does it need to be that ugly, then i discovered .xsl
+
+thats all from AI
